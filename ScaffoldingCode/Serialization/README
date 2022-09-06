@@ -1,0 +1,3 @@
+This directory comprises sample code showing serialization frameworks.
+As of Sept 2022, there is sample code for Flatbuffers and JSON.
+

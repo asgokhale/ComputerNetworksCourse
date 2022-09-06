@@ -1,0 +1,40 @@
+// Author: Aniruddha Gokhale, Vanderbilt University
+// Created: Aug 2022 (based on earlier version created for
+//          Cloud and Distributed Systems courses)
+//
+
+Purpose of this sample code is to show how JSON objects can be serialized and
+ deserialized. 
+
+Files in this directory:
+-----------------------
+
+jsondemo_local.py
+        Driver program to showcase the JSON based approach serialization without any network
+        
+jsondemo_zmq.py
+        Driver program to showcase the JSON based approach serialization with ZMQ client-server
+        in the same program
+        
+serialize.py
+        Simple manually created native to JSON and reverse conversion.
+
+custom_msg.py
+        Defines our data structure in the native format.
+
+-----------------------------
+Package installation
+-----------------------------
+
+See https://docs.python.org/3/library/json.html
+
+If it is not there in your installation, install via pip
+
+Running the Code
+-------------------------
+
+The rest of the code is run in the following manner:
+(1) Open one shell in your Ubuntu VM
+(2) Invoke "python3 jsondemo_local.py" to run just the serialization logic
+OR
+(2) Invoke "python3 jsondemo_local.py" to run the serialization logic with ZMQ

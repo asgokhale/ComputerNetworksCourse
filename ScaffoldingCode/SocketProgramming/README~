@@ -1,0 +1,7 @@
+Author: Aniruddha Gokhale
+Vanderbilt University
+
+Created: Fall 2022
+
+This directory comprises code for network programming using traditional sockets
+in C/C++ and Python, and then showing how ZMQ simplifies the programming.

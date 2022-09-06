@@ -1,0 +1,18 @@
+Author: Aniruddha Gokhale
+Vanderbilt University
+Created: Fall 2022
+
+This is the top-level folder comprising sample/scaffolding code for various
+packages/frameworks that are needed in systems courses that I teach, such as
+Cloud Computing, Distributed Systems and Computer Networks.
+
+Directories so far:
+
+SocketProgramming
+        Shows network programming using socket-level programming. Here, we show
+        both traditional and ZeroMQ sockets.
+
+Serialization
+        Here we show some serialization frameworks on user-defined message formats.
+
+

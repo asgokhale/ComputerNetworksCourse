@@ -1,0 +1,26 @@
+Author: Aniruddha Gokhale
+Vanderbilt University
+Created: Fall 2022
+
+Directory contents:
+
+CPP_Sockets
+        Comprises network programming code using traditional sockets in C/C++.
+
+        Build the code by running the make command. To run the built executables,
+        open two shells. In one shell, run the server code. Make a note of the
+        port number on which the server is going to run. In another shell, run the
+        client executable. It will ask for the server's port and IP address. If
+        running on the same machine, the IP address of server will be 127.0.0.1.
+        
+
+Python_Sockets
+        Comprises network programming code using traditional sockets in Python.
+        Open two shells. In one shell, run the server code with the python3 interpreter.
+        In another shell, run the corresponding client code through the python3
+        interpreter.
+
+
+
+
+

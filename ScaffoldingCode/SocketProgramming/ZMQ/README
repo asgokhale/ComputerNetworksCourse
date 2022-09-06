@@ -1,0 +1,9 @@
+Author: Aniruddha Gokhale
+Vanderbilt University
+Created: Fall 2022
+
+This directory shows code using ZMQ sockets. Note that you must have installed
+the pyzmq Python3 package to run the code. Note also that the UDP code may not work
+as it uses the experimental RADIO-DISH pattern, which requires building the ZMQ
+library in a special way.
+
