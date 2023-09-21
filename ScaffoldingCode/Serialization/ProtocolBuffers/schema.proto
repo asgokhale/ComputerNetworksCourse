@@ -1,0 +1,59 @@
+// Author: Aniruddha Gokhale, Vanderbilt University
+// Created: Sept 2023 for Computer Networks Course
+//
+
+// This schema mimics the Flatbuf schema, however, using the Protocol Buffers syntax
+
+// Please see https://protobuf.dev/programming-guides/proto3/ for details on the different data types
+
+// Let us use the Version 3 syntax as that is the newest and feature rich. This must be specified
+// else the compiler will choose older version
+syntax = "proto3";
+
+// There is no namespace as such but we use a command line argument
+// to the protoc compiler to create a directory in which to dump the generated code.
+
+// In ProtoBufs, instead of a "table" as used in FlatBufs, we use the construct "message"
+
+// We use the exact data type we had in Flatbufs but this time using ProtoBuf syntax
+// Note that the = 1, = 2 etc are not their default values but it indicates the position of the
+// field in that data type
+
+message Request
+{
+   uint32 seq_no = 1;   // this is like the seq num in a TCP segment
+   double ts = 2;       // say this is the timestamp
+   string name = 3;      // say this is some descriptive string
+   repeated uint32 data = 4;    // say this is some blob of binary data
+}
+
+// Note that in our programming assignment we have more than one message type
+// (Grocery and Health).  Thus, you might want to use an enumerated type to
+// first include the message type. ProtocolBuffers also includes a "OneOf"
+// feature in which a field can be one of many different choices. In this way
+// you could define a message for grocery msg body and health msg body, and
+// declare these as one of fields in this top level message. When serializing
+// and deserializing, you consult the message type field and take actions
+// appropriately.  
+
+// In our service, we do not expect anything coming back and so we declare an
+// empty response.
+message Response
+{
+}
+
+
+// Note that in your assignment, since you will have at least two separate types of 
+// There is no "top level" root structure as in FlatBufs. We decide what is top for us
+
+// Protocol Buffers also allow the facility to define services so as to support
+// remote procedure calls. This did not exist in FlatBufs, but we declare one
+// here as gRPC is a remote procedure call approach where the service must
+// provide an interface declaring what is accepted as a request and what goes
+// back as a response for that request. A response can comprise empty field if
+// nothing is expected as a response.
+
+service DummyService
+{
+    rpc method (Request) returns (Response) {};
+}
